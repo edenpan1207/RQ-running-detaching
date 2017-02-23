@@ -70,11 +70,7 @@ body {
     color: #5CB85C;
     text-align: center;   
 }
-/*
-.fa-caret-down {
-    margin-left: 20%;
- }
-*/
+
 .result-content {
     margin-bottom: 50px;
     h3 {
@@ -82,13 +78,30 @@ body {
         border-bottom: 5px solid rgba(55, 118, 29,0.5);
         padding-bottom: 8px;
         margin-bottom: 20px;
-        font-weight: bold;      
+        font-weight: bold;   
+        float: left; 
+        @include l-phone {
+            float: none;
+        }  
+    }
+    .input-group {
+        float: right;
+        margin-top: 20px;
+        @include l-phone {
+            margin-top: 0;
+            margin-bottom: 20px;
+            float: none;
+        }
     }
 }
+
+
+
 
 .table-inform {
     th {      
         text-align: center;
+        font-weight: bold;
     }
     input {
         width: 26%; 
@@ -97,6 +110,9 @@ body {
         @include l-phone {
             width: 40%;
         }
+    }
+    .label-km {
+        
     }
 }
 

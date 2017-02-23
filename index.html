@@ -26,11 +26,12 @@
                 <form class="form-inline" action="file:///C:/Users/midori/Desktop/RQ%E8%B7%91%E5%8A%9B%E6%AA%A2%E6%B8%AC/index.html?hour=&min=&sec=" method="">
                     <div class="form-group">
                         <select class="form-control">
-                             <option>3km 最佳成績</option>
-                            <option>5km 最佳成績</option>
-                            <option>10km 最佳成績</option>
-                            <option>半馬 最佳成績</option>
-                            <option>全馬 最佳成績</option>
+                        <option value="1.6km">1.6 km 最佳成績</option>
+                             <option value="3km">3 km 最佳成績</option>
+                            <option value="5km">5 km 最佳成績</option>
+                            <option value="10km">10 km 最佳成績</option>
+                            <option value="half">半馬 最佳成績</option>
+                            <option value="all">全馬 最佳成績</option>
                         </select>
                     </div>
                     <div class="form-group input-position">
@@ -86,11 +87,20 @@
 
                 <div class="row">
                     <div class="col-md-6 result-content">
-                        <h3>相同跑力者<small>最佳成績</small></h3>
+                        <h3>相同跑力者最佳成績</h3>
                         <table class="table table-bordered table-hover table-inform text-center">
+                        <thead>
+                        <tr>
+                            <th>項目</th>
+                            <th>最佳成績</th>
+                            <th>平均配速</th>
+                        </tr>
+                        </thead>
+                        <tbody>
                             <tr>
                                 <td>全程馬拉松</td>
                                 <td>4:02:13</td>
+                                <td>5:44</td>
                             </tr>
                             <tr>
                                 <td>
@@ -99,104 +109,113 @@
                                 <td>
                                    1:55:26
                                 </td>
+                                <td>5:30</td>
                             </tr>
                             <tr>
                                 <td>十公里</td>
                                 <td>
                                     0:52:00
                                 </td>
+                                <td>5:12</td>
                             </tr>
                             <tr>
                                 <td>五公里</td>
                                 <td>
                                     0:25:01
                                 </td>
+                                <td>5:00</td>
                             </tr>
                             <tr>
                                 <td>三公里</td>
                                 <td>
                                     0:14:32
                                 </td>
+                                <td>4:51</td>
                             </tr>
+                            <tr>
+                                <td>一千六百公尺</td>
+                                <td>0:07:22</td>
+                                <td>4:36</td>
+                            </tr>
+                            </tbody>
                         </table>
                     </div>
+
                     <div class="col-md-6 result-content">
-                        <h3>建議各強度區間配速</h3>
+                    <h3>建議各強度區間配速</h3>
+
+                        <div class="input-group col-sm-6 col-xs-8">
+                          <span class="input-group-addon">配速距離</span>
+                          <input type="number" class="form-control" name="k" id="k" value="1000">
+                          <span class="input-group-addon"> 公尺(m)</span>
+                        </div>
+
                         <table class="table table-hover table-bordered table-inform  text-center">
+                        <thead>
                             <tr>
-                                <th></th>
+                                <th>區間名稱</th>
                                 <th>
-                                <label for="K">配速</label>
-                                    <input type="number" name="k" id="k" value="20"> km
+                                    配速(1km)
                                 </th>
-                                <th>時速 ( Km / H )</th>
+                                <th>時速(km/hr)</th>
                             </tr>
+                        </thead>
+
+                        <tbody>
                             <tr>
                                 <td>
-                                    E 配速上限
+                                    <span class="label label-default eBg">E</span> 配速1區
                                 </td>
                                 <td>6:41 ~ 5:57</td>
                                 <td>
-                                    <span>
-                                    12.9
-                                </span>
+                                    9.0 ~ 10.1
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    M 配速
+                                    <span class="label label-default mBg">M</span> 配速2區
                                 </td>
                                 <td>5:57 ~ 5:32</td>
-                                <td>
-                                    <span>
-                                    15.3
-                                </span>
+                                <td>10.1 ~ 10.8
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    T 配速
+                                   <span class="label label-default tBg">T</span> 配速3區
                                 </td>
                                 <td>5:32 ~ 5:09</td>
                                 <td>
-                                    <span>
-                                    16.1
-                                </span>
+                                     10.8 ~ 11.6
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    A 配速
+                                    <span class="label label-default aBg">A</span> 配速4區
                                 </td>
                                 <td>5:09 ~ 4:47</td>
                                 <td>
-                                    <span>
-                                    17.6
-                                </span>
+                                 11.6 ~ 12.6
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    I 配速
+                                    <span class="label label-default iBg">I</span> 配速5區
                                 </td>
                                 <td>4:47 ~ 4:26</td>
                                 <td>
-                                    <span>
-                                    17.6
-                                </span>
+                                   12.6 ~ 13.6
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    R 配速
+                                    <span class="label label-default rBg">R</span> 配速6區
                                 </td>
                                 <td>4:26 +</td>
                                 <td>
-                                    <span>
-                                    19.5
-                                </span>
+                                   13.6 +
                                 </td>
                             </tr>
+                          </tbody>
                         </table>
                     </div>
                 </div>

@@ -32,8 +32,8 @@ $(document).ready(function() {
         e.preventDefault();
         $('.detect-result').slideDown(500);
 
-        //
-        $('.myrunlevel').animateNumbers(20.5, true, 1000);
+        
+        $('.myrunlevel').animateNumbers(20, true, 1000);
         $('.fa-caret-down').animate({
             marginLeft: '20%'
         }, 1000);

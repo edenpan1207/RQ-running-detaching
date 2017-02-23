@@ -61,11 +61,6 @@ body {
   color: #5CB85C;
   text-align: center; }
 
-/*
-.fa-caret-down {
-    margin-left: 20%;
- }
-*/
 .result-content {
   margin-bottom: 50px; }
   .result-content h3 {
@@ -73,10 +68,23 @@ body {
     border-bottom: 5px solid rgba(55, 118, 29, 0.5);
     padding-bottom: 8px;
     margin-bottom: 20px;
-    font-weight: bold; }
+    font-weight: bold;
+    float: left; }
+    @media (max-width: 568px) {
+      .result-content h3 {
+        float: none; } }
+  .result-content .input-group {
+    float: right;
+    margin-top: 20px; }
+    @media (max-width: 568px) {
+      .result-content .input-group {
+        margin-top: 0;
+        margin-bottom: 20px;
+        float: none; } }
 
 .table-inform th {
-  text-align: center; }
+  text-align: center;
+  font-weight: bold; }
 
 .table-inform input {
   width: 26%;
