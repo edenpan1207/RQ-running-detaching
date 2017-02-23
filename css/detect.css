@@ -80,7 +80,9 @@ body {
 
 .table-inform input {
   width: 26%;
-  text-align: right; }
+  text-align: right;
+  border: 1px solid #ccc;
+  border-radius: 5px; }
   @media (max-width: 568px) {
     .table-inform input {
       width: 40%; } }

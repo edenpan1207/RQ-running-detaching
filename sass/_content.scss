@@ -93,13 +93,12 @@ body {
     input {
         width: 26%; 
         text-align: right; 
+        @include boxOutLine
         @include l-phone {
             width: 40%;
         }
     }
 }
-
-
 
 
 .eBg {
