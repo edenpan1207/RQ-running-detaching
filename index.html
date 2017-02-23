@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/detect.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="container">
+                this is header
+            </div>
+        </div>
+        <div class="content-hr container">
+            <div class="page-header">
+                <h1>跑力檢測 <small> 檢視您的競賽跑力</small></h1>
+            </div>
+            <div class="content-input">
+                <h2>請輸入檢測成績</h2>
+                <form class="form-inline" action="file:///C:/Users/midori/Desktop/RQ%E8%B7%91%E5%8A%9B%E6%AA%A2%E6%B8%AC/index.html?hour=&min=&sec=" method="">
+                    <div class="form-group">
+                        <select class="form-control">
+                             <option>3km 最佳成績</option>
+                            <option>5km 最佳成績</option>
+                            <option>10km 最佳成績</option>
+                            <option>半馬 最佳成績</option>
+                            <option>全馬 最佳成績</option>
+                        </select>
+                    </div>
+                    <div class="form-group input-position">
+                        <input type="number" class="num" id="inputNum1" name="hour" placeholder="00">
+                        <label for="inputNum1">時</label>
+                        <input type="number" class="num" id="inputNum2" name="min" placeholder="00">
+                        <label for="inputNum2">分</label>
+                        <input type="number" class="num" id="inputNum3" name="sec" placeholder="00">
+                        <label for="inputNum3">秒</label>
+                        <button type="submit" class="press"><a href="#result">檢測</a></button>
+                    </div>
+                </form>
+            </div>
+            <div class="detect-result">
+                <div class="result-content" id="result">
+                    <h3>競賽跑力</h3>
+                    <span class="myrunlevel" data-toggle="tooltip" title="" data-original-title="當前最符合您的跑力值">0</span>
+                    
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <span class="pull-left">入門</span>
+                            <span class="pull-right">菁英</span>
+                        </div>
+                    </div>
+                    <span class="fa fa-caret-down fa-2x" aria-hidden="true"></span>
+                    <div class="progress">
+                        <div class="progress-bar eBg" style="width: 15%">
+                            <span class="sr-only"></span>
+                        </div>
+
+                        <div class="progress-bar mBg" style="width: 15%">
+                            <span class="sr-only"></span>
+                        </div>
+
+                        <div class="progress-bar tBg" style="width: 19%">
+                            <span class="sr-only"></span>
+                        </div>
+
+                        <div class="progress-bar aBg" style="width: 21%">
+                            <span class="sr-only"></span>
+                        </div>
+
+                        <div class="progress-bar iBg" style="width: 15%">
+                            <span class="sr-only"></span>
+                        </div>
+
+                        <div class="progress-bar rBg" style="width: 15%">
+                            <span class="sr-only"></span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 result-content">
+                        <h3>相同跑力者<small>最佳成績</small></h3>
+                        <table class="table table-bordered table-hover table-inform text-center">
+                            <tr>
+                                <td>全程馬拉松</td>
+                                <td>4:02:13</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    半程馬拉松
+                                </td>
+                                <td>
+                                   1:55:26
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>十公里</td>
+                                <td>
+                                    0:52:00
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>五公里</td>
+                                <td>
+                                    0:25:01
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>三公里</td>
+                                <td>
+                                    0:14:32
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-md-6 result-content">
+                        <h3>建議各強度區間配速</h3>
+                        <table class="table table-hover table-bordered table-inform  text-center">
+                            <tr>
+                                <th></th>
+                                <th>
+                                <label for="K">配速</label>
+                                    <input type="number" name="k" id="k" value="20"> km
+                                </th>
+                                <th>時速 ( Km / H )</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    E 配速上限
+                                </td>
+                                <td>6:41 ~ 5:57</td>
+                                <td>
+                                    <span>
+                                    12.9
+                                </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    M 配速
+                                </td>
+                                <td>5:57 ~ 5:32</td>
+                                <td>
+                                    <span>
+                                    15.3
+                                </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    T 配速
+                                </td>
+                                <td>5:32 ~ 5:09</td>
+                                <td>
+                                    <span>
+                                    16.1
+                                </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    A 配速
+                                </td>
+                                <td>5:09 ~ 4:47</td>
+                                <td>
+                                    <span>
+                                    17.6
+                                </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    I 配速
+                                </td>
+                                <td>4:47 ~ 4:26</td>
+                                <td>
+                                    <span>
+                                    17.6
+                                </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    R 配速
+                                </td>
+                                <td>4:26 +</td>
+                                <td>
+                                    <span>
+                                    19.5
+                                </span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                this is footer
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/detach.js"></script>
+</body>
+
+</html>
