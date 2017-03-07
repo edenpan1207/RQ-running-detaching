@@ -23,15 +23,20 @@ body {
     .num {
       width: 23%; } }
 
+.chart {
+  height: 200px;
+  width: 50%;
+  float: left;
+  margin-bottom: 20px; }
+
 .press {
   background-color: #37761d;
   border: 1px solid #37761d;
   border-radius: 50px;
-  padding: 5px 20px; }
-  .press a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold; }
+  padding: 5px 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold; }
   @media (max-width: 768px) {
     .press {
       margin-top: 20px;
@@ -58,8 +63,11 @@ body {
   display: block;
   font-size: 62px;
   font-weight: bold;
-  color: #5CB85C;
-  text-align: center; }
+  text-align: center;
+  padding-top: 30px; }
+
+.progress {
+  margin-bottom: 50px; }
 
 .result-content {
   margin-bottom: 50px; }
@@ -68,11 +76,17 @@ body {
     border-bottom: 5px solid rgba(55, 118, 29, 0.5);
     padding-bottom: 8px;
     margin-bottom: 20px;
-    font-weight: bold;
-    float: left; }
-    @media (max-width: 568px) {
-      .result-content h3 {
-        float: none; } }
+    font-weight: bold; }
+  .result-content .pace-clone {
+    display: inline-block;
+    font-size: 18px;
+    padding-left: 20px; }
+    @media (max-width: 768px) {
+      .result-content .pace-clone {
+        padding-left: 0; } }
+  .result-content .row .pull-right span {
+    font-size: 18px;
+    font-weight: bold; }
   .result-content .input-group {
     float: right;
     margin-top: 20px; }
@@ -112,3 +126,58 @@ body {
 
 .rBg {
   background-color: #D9534F !important; }
+
+/*
+.age-linear {
+    background: linear-gradient(to right,#244d13,#54b32c) !important;
+}
+.sex-linear {
+    background: -webkit-linear-gradient(left,#37761d,#5cc530) !important;
+    background: -o-linear-gradient(left,#37761d,#5cc530) !important;
+    background: -moz-linear-gradient(left,#37761d,#5cc530) !important;
+    background: linear-gradient(to right,#37761d,#5cc530) !important;
+}
+*/
+.table-pace {
+  display: none; }
+
+.result-content-none {
+  opacity: 0.8;
+  filter: alpha(opacity=50);
+  background-image: url(../img/blur.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  .result-content-none p {
+    padding: 83px 10px;
+    z-index: 9;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: black; }
+    .result-content-none p a {
+      text-decoration: none;
+      border: 1px solid #37761D;
+      border-radius: 10px;
+      background-color: #37761D;
+      color: #fff;
+      padding: 8px;
+      margin-left: 5px; }
+    .result-content-none p > span {
+      display: block;
+      padding: 10px 0; }
+
+.btn-store {
+  border: 1px solid #37761d;
+  border-radius: 20px;
+  background-color: #37761d;
+  padding: 5px 12px;
+  margin-left: 10px; }
+  .btn-store:hover {
+    background-color: #459725;
+    border: 1px solid #459725; }
+  .btn-store a {
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white; }

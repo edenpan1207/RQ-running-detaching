@@ -28,26 +28,48 @@
 $(document).ready(function() {
     $('.detect-result').hide();
 
-    $('.press').click(function(e) {
-        e.preventDefault();
+    $('.form').submit(function(event) {
+        event.preventDefault();
+
         $('.detect-result').slideDown(500);
-
-        
-        $('.myrunlevel').animateNumbers(20, true, 1000);
-        $('.fa-caret-down').animate({
-            marginLeft: '20%'
-        }, 1000);
-    });
-
-    $('.press').click(function(e) {
-        e.preventDefault();
-        var connect = $('.press > a').attr('href');
+        //
+        var connect = $('.press').attr('href');
         var position = $(connect).offset().top;
         $('body').stop().animate({
             scrollTop: position
         }, 700);
+
+        var numHour = $('#inputNum1').val();
+        var numMin = $('#inputNum2').val();
+        var numSec = $('#inputNum3').val();
+        var formOption = $('.form-distance').val();
+        $('.pace-clone').html('<span>' + '距離: ' + formOption + ' ' + ' ' + ' 時間: ' + numHour + '時 ' + numMin + '分 ' + numSec + '秒' + '</span>')
+
+        //
+        resultAnimate(38, 0.8);
     });
 
+    
 
+    function resultAnimate(num, index) {
+        var myRunLevel = $('.myrunlevel');
+        myRunLevel.animateNumbers(num, true, 1000);
+        $('.fa-one').animate({
+            "marginLeft": (index * 100) + '%'
+        }, 1000);
 
-})
+        if (index <= 0.31) {
+            myRunLevel.css('color', '#5BC0DE');
+        } else if (index > 0.31 && index <= 0.56) {
+            myRunLevel.css('color', '#5CB85C');
+        } else if (index > 0.56 && index <= 0.74) {
+            myRunLevel.css('color', '#337AB7');
+        } else if (index > 0.74 && index <= 0.87) {
+            myRunLevel.css('color', 'rgb(252, 227, 3)');
+        } else if (index > 0.87 && index <= 0.95) {
+            myRunLevel.css('color', '#F0AD4E');
+        } else {
+            myRunLevel.css('color', '#D9534F');
+        }
+    }
+});
